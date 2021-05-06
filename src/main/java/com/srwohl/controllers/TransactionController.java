@@ -19,7 +19,7 @@ public class TransactionController {
 	TransactionService service;
 	
 	@RequestMapping(value = ENDPOINTS.TRANSACTIONS.ID, method = RequestMethod.GET)
-	public List<Transaction> getTransactionsForAccount(@PathVariable("id") String accountNumber){
+	public List<Transaction> getTransactionsForAccount(@PathVariable("id") Integer accountNumber){
 		return service.findAllByAccountNumber(accountNumber);
 	}
 }

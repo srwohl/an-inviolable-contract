@@ -1,21 +1,22 @@
 package com.srwohl.api;
 
+import lombok.Builder;
 import lombok.Data;
 import java.util.Date;
 
 @Data
+@Builder
 public class Transaction {
 	
 	private Type type;
 	private Date date;
-	private String accountNumber;
-	private String curency;
-	private Long amount;
+	private Integer accountNumber;
+	private String currency;
+	private Double amount;
 	private String merchantName;
 	private String merchantLogo;
 	
-	private enum Type {
+	public enum Type {
 		Transfer, Paymnet, Credit
-	};
-
+	}
 }

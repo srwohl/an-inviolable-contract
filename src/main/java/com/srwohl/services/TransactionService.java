@@ -8,5 +8,5 @@ import com.srwohl.api.Transaction;
 
 @Service
 public interface TransactionService {
-	public List<Transaction> findAllByAccountNumber(String accountNumber);
+	public List<Transaction> findAllByAccountNumber(Integer accountNumber);
 }
